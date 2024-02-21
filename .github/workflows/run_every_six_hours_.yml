@@ -33,3 +33,5 @@ jobs:
           git add .
           git commit -m "Update JSON file"
           git push origin HEAD:master
+        env: 
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
