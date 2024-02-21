@@ -21,12 +21,11 @@ jobs:
         run: pip install -r requirements.txt  # Install any Python dependencies if needed
         
       - name: Run script
-        run: jupyter nbconvert --to script Movie_scraping.ipynb  # Run your Python script
+        run: jupyter nbconvert --to script moviescraper/Movie_scraping.ipynb  # Run your Python script
         
       - name: Commit and push changes
         run: |
-          git config --local user.email "syedabdullahcslab@gmail.com"
-          git config --local user.name "syed-abdullah-g"
+          git remote set-url origin https://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@github.com/syed-abdullah-g/moviescraper
           git add .
           git commit -m "Update JSON file"
           git push origin HEAD:master
