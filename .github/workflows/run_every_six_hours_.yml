@@ -25,7 +25,7 @@ jobs:
         
       - name: Commit and push changes
         run: |
-          git remote set-url origin https://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@github.com/syed-abdullah-g/moviescraper
+          git remote set-url origin https://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@github.com/syed-abdullah-g/moviescraper
           git add .
           git commit -m "Update JSON file"
           git push origin HEAD:master
