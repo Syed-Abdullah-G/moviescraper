@@ -1,0 +1,32 @@
+name: Run and Push Script
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Runs every 6 hours
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Choose the Python version you need
+          
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # Install any Python dependencies if needed
+        
+      - name: Run script
+        run: python moviescraper/Movie_scraping.ipynb  # Run your Python script
+        
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "syedabdullahcslab@gmail.com"
+          git config --local user.name "syed-abdullah-g"
+          git add .
+          git commit -m "Update JSON file"
+          git push origin HEAD:master
