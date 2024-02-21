@@ -1,5 +1,9 @@
 name: Run and Push Script
 
+permissions:
+  contents: read
+  pages: write
+
 on:
   schedule:
     - cron: '* * * * *'  # Runs every 6 hours
