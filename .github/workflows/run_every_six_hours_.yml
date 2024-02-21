@@ -28,7 +28,8 @@ jobs:
         
       - name: Commit and push changes
         run: |
-          git remote set-url origin https://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@github.com/syed-abdullah-g/moviescraper
+          git config --local user.email "syedabdullahcslab@gmail.com"
+          git config --local user.name "GitHub Action"
           git add .
           git commit -m "Update JSON file"
           git push origin HEAD:master
