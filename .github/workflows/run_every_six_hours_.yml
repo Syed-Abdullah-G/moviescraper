@@ -4,10 +4,9 @@ permissions:
   contents: read
   pages: write
 
-on:
+on: 
   schedule:
     - cron: '* * * * *'  # Runs every 6 hours
-
 jobs:
   build:
     runs-on: ubuntu-latest
