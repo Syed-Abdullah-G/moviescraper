@@ -31,6 +31,8 @@ jobs:
         
       - name: Commit and push changes
         run: |
+          git config --global user.email "syedabdullahcslab@gmail.com"
+          git config --global user.name "syedabdullah"
           git add .
           git commit -m "Update JSON file"
           git push https://github.com/Syed-Abdullah-G/moviescraper.git HEAD:master
