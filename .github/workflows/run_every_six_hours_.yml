@@ -21,7 +21,7 @@ jobs:
         run: pip install -r requirements.txt  # Install any Python dependencies if needed
         
       - name: Run script
-        run: python moviescraper/Movie_scraping.ipynb  # Run your Python script
+        run: jupyter nbconvert --to script Movie_scraping.ipynb  # Run your Python script
         
       - name: Commit and push changes
         run: |
