@@ -2,7 +2,7 @@ name: Run and Push Script
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Runs every 6 hours
+    - cron: '* * * * *'  # Runs every 6 hours
 
 jobs:
   build:
